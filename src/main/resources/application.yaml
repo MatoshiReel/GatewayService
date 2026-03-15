@@ -14,21 +14,7 @@ spring:
               uri: http://127.0.0.1:8081
               predicates:
                 - Path=/auth/**
-                - Method=GET,POST
-              filters:
-                - name: DemoGatewayFilter
-                - name: RequestRateLimiter
-                  args:
-                    denyEmptyKey: false
-                    redis-rate-limiter.replenishRate: 10
-                    redis-rate-limiter.burstCapacity: 15
-                    redis-rate-limiter.requestedTokens: 1
-
-            - id: node-server
-              uri: http://127.0.0.1:3000
-              predicates:
-                - Path=/node/**
-                - Method=GET
+                - Method=POST
               filters:
                 - name: RequestRateLimiter
                   args:
