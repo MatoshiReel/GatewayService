@@ -6,9 +6,9 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @SpringBootApplication
-public class ProxyServiceApplication {
+public class GatewayServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProxyServiceApplication.class, args);
+		SpringApplication.run(GatewayServiceApplication.class, args);
 	}
 }
